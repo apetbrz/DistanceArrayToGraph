@@ -92,7 +92,7 @@ nx.set_edge_attributes(Ax, lengthsA, 'tension')
 # finally, i initialize the spring layout
 # using the new tension attribute
 # i only calculate it for graph Ax, as i will use the same layout for both graphs
-pos = nx.spring_layout(Ax, seed=69, iterations=1024, weight='tension')
+pos = nx.spring_layout(Ax, seed=69, iterations=1024, weight='tension', k=0.13)
 
 # with the graphs made, and node positions calculated, all thats left is to draw the graphs
 # so i draw a graph,
