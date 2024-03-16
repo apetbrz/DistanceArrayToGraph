@@ -37,8 +37,7 @@ B = np.array([(0, 300, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, n
               (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 0, np.Inf, 383, 1709),
               (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 1613, np.Inf, 0, 328, np.Inf),
               (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 383, 328, 0, np.Inf),
-              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 1709, np.Inf, np.Inf, 0),
-              ])
+              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 1709, np.Inf, np.Inf, 0)])
 # apply dt
 B = B.view(dt)
 
