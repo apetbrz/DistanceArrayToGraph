@@ -9,51 +9,51 @@ import matplotlib.pyplot as plt
 dt = [('len', float)]
 
 # graph A: distance array (from CSCI 321)
-A = np.array([(0, 300, np.Inf, np.Inf, 2161, 2661, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
-              (300, 0, 629, 919, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
-              (np.Inf, 629, 0, 435, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
-              (np.Inf, 919, 435, 0, 1225, np.Inf, 1983, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
-              (2161, np.Inf, np.Inf, 1225, 0, 1483, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
+A = np.array([(0, 1306, np.Inf, np.Inf, 2161, 2661, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
+              (1306, 0, 629, 919, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
+              (np.Inf, 629, 0, 435, 1225, np.Inf, 1983, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
+              (np.Inf, 919, 435, 0, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
+              (2161, np.Inf, 1225, np.Inf, 0, 1483, 1258, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
               (2661, np.Inf, np.Inf, np.Inf, 1483, 0, 1582, 661, np.Inf, np.Inf, np.Inf, np.Inf),
-              (np.Inf, np.Inf, np.Inf, 1983, np.Inf, 1582, 0, np.Inf, 2113, np.Inf, np.Inf, 2161),
-              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 661, np.Inf, 0, np.Inf, 1613, np.Inf, np.Inf),
-              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 2113, np.Inf, 0, 725, 383, 1709),
-              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 1613, 725, 0, 328, np.Inf),
-              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 383, 328, 0, 2145),
+              (np.Inf, np.Inf, 1983, np.Inf, 1258, 1582, 0, np.Inf, 2113, np.Inf, np.Inf, 2161),
+              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 661, np.Inf, 0, 1145, 1613, np.Inf, np.Inf),
+              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 2113, 1145, 0, 725, 383, 1709),
+              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 1613, 725, 0, 338, np.Inf),
+              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 383, 338, 0, 2145),
               (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 2161, np.Inf, 1709, np.Inf, 2145, 0)])
 # apply dt
 A = A.view(dt)
 
 # graph B: graph A after it was passed through my implementation of Prim's algorithm
 # aka, graph A's Minimum Spanning Tree
-B = np.array([(0, 300, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
-              (300, 0, 629, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
-              (np.Inf, 629, 0, 435, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
-              (np.Inf, np.Inf, 435, 0, 1225, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
-              (np.Inf, np.Inf, np.Inf, 1225, 0, 1483, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
-              (np.Inf, np.Inf, np.Inf, np.Inf, 1483, 0, 1582, 661, np.Inf, np.Inf, np.Inf, np.Inf),
-              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 1582, 0, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
-              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 661, np.Inf, 0, np.Inf, 1613, np.Inf, np.Inf),
-              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 0, np.Inf, 383, 1709),
-              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 1613, np.Inf, 0, 328, np.Inf),
-              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 383, 328, 0, np.Inf),
+B = np.array([(0, 1306, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
+              (1306, 0, 629, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
+              (np.Inf, 629, 0, 435, 1225, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
+              (np.Inf, np.Inf, 435, 0, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
+              (np.Inf, np.Inf, 1225, np.Inf, 0, 1483, 1258, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
+              (np.Inf, np.Inf, np.Inf, np.Inf, 1483, 0, np.Inf, 661, np.Inf, np.Inf, np.Inf, np.Inf),
+              (np.Inf, np.Inf, np.Inf, np.Inf, 1258, np.Inf, 0, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf),
+              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 661, np.Inf, 0, 1145, np.Inf, np.Inf, np.Inf),
+              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 1145, 0, np.Inf, 383, 1709),
+              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 0, 338, np.Inf),
+              (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 383, 338, 0, np.Inf),
               (np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, np.Inf, 1709, np.Inf, np.Inf, 0)])
 # apply dt
 B = B.view(dt)
 
 # names: the names of the locations of which the graphs above represent the distances between
-names = ["Seattle",
-         "San Francisco",
-         "Los Angeles",
-         "Las Vegas",
-         "Denver",
-         "Minneapolis",
-         "Dallas",
-         "Chicago",
-         "Washington DC",
-         "Boston",
-         "New York",
-         "Miami"]
+names = [" 0.Seattle",
+         " 1.San Francisco",
+         " 2.Los Angeles",
+         " 3.Las Vegas",
+         " 4.Denver",
+         " 5.Minneapolis",
+         " 6.Dallas",
+         " 7.Chicago",
+         " 8.Washington DC",
+         " 9.Boston",
+         "10.New York",
+         "11.Miami"]
 
 # Ax, Bx: the networkx graph representations of graphs A and B
 Ax = nx.from_numpy_array(A)
@@ -92,7 +92,7 @@ nx.set_edge_attributes(Ax, lengthsA, 'tension')
 # finally, i initialize the spring layout
 # using the new tension attribute
 # i only calculate it for graph Ax, as i will use the same layout for both graphs
-pos = nx.spring_layout(Ax, seed=69, iterations=1024, weight='tension', k=0.13)
+pos = nx.spring_layout(Ax, seed=64, iterations=1024, weight='tension', k=0.13)
 
 # with the graphs made, and node positions calculated, all thats left is to draw the graphs
 # so i draw a graph,
